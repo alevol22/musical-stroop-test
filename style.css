@@ -1,0 +1,267 @@
+body{
+    font-family: "Raleway", sans-serif;
+    text-align: center;
+    margin: 0;
+    transition: .3s all;
+}
+.center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+#color-title{
+    font-size: 112px;
+    margin: 0;
+}
+
+#keys{
+    position: absolute;
+    bottom: 32px;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.key{
+    background: #E0E0E0;
+    box-shadow: 2px 2px #BDBDBD;
+    padding: 12px 14px;
+    font-weight: 600;
+    display: inline-block;
+    margin-right: 12px;
+    font-size: 14px;
+}
+.tip{
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 32px;
+}
+.tip:nth-child(1){
+    margin: 0;
+}
+
+.stats{
+    position: absolute;
+    top: 32px;
+    width: 100%;
+}
+.container{
+    position: relative;
+}
+.left-stats{
+    position: absolute;
+    left: 0px;
+    margin-left: 32px;
+}
+.right-stats{
+    position: absolute;
+    right: 0px;
+    margin-right: 32px;
+}
+
+.stat{
+    display: inline-block;
+    margin-left: 32px;
+}
+.stat:nth-child(1){
+    margin: 0;
+}
+
+#plus-indicator{
+    position: absolute;
+    left: 65px;
+    top: 26px;
+    font-size: 24px;
+    color: #2ecc71;
+    transition: .3s all;
+    opacity: 0;
+}
+
+.page{
+    display: none;
+    animation: fadeIn .3s;
+}
+.start{
+    display: block;
+}
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }to{
+        opacity: 1;
+    }
+}
+
+.form-select {
+    height: 50 px;
+    width: calc(20% - 32px);
+    display: inline-block;
+    font-size: 40px;
+    margin: 32px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+
+#study-title{
+    font-size: 56px;
+}
+.narrow{
+    width: 50%;
+}
+#my-signin2{
+  width: 100%;
+  margin-bottom: 32px;
+}
+
+#my-signin2 > div{
+  margin: 0 auto;
+}
+
+.big-button{
+    width: calc(40% - 64px);
+    display: inline-block;
+    text-align: center;
+    padding: 128px 0;
+    font-size: 24px;
+    color: white;
+    margin: 32px;
+    box-sizing: border-box;
+    cursor: pointer;
+    box-shadow: 0 16px 24px 2px rgba(0,0,0,0.14), 0 6px 30px 5px rgba(0,0,0,0.12), 0 8px 10px 0 rgba(0,0,0,0.2);
+    transition: .3s all;
+}
+.big-button:hover{
+    box-shadow: 0 8px 10px 1px rgba(0,0,0,0.14), 0 3px 14px 3px rgba(0,0,0,0.12), 0 4px 15px 0 rgba(0,0,0,0.2);
+}
+#bilingual-page-title{
+    font-size: 80px;
+}
+
+#survey-page h2{
+    font-weight: 600;
+    color: #424242;
+    font-size: 28px;
+    margin: 32px 0px;
+}
+
+/* check boxes */
+.question{
+    margin: 32px 0;
+}
+#questions-container hr{
+    width: 50%;
+}
+.answers{
+    white-space: nowrap;
+    min-width: 770px;
+}
+.answers div{
+    display: inline-block;
+    margin: 0px 16px;
+}
+.answer{
+    border-radius: 50%;
+    border-width: 3px;
+    border-style: solid;
+    transition: .3s all;
+    cursor: pointer;
+}
+.answers .material-icons{
+    vertical-align: baseline;
+    color: transparent;
+}
+.answer-lg{
+    width: 64px;
+    height: 64px;
+}
+.answer-sm{
+    width: 48px;
+    height: 48px;
+}
+.neutral{
+    width: 32px;
+    height: 32px;
+    border-color: #636363;
+}
+.answer-lg .material-icons{
+    line-height: 64px;
+}
+.answer-sm .material-icons{
+    line-height: 48px;
+}
+.neutral .material-icons{
+    line-height: 32px;
+}
+.answer-agree{
+    border-color: #56ac8a;
+}
+.answer-disagree{
+    border-color: #5f394d;
+}
+.answer-agree:hover{
+    background: #56ac8a;
+}
+.answer-disagree:hover{
+    background: #5f394d;
+}
+.neutral:hover{
+    background: #636363;
+}
+.answer-agree.active{
+    background: #56ac8a;
+}
+.answer-disagree.active{
+    background: #5f394d;
+}
+.neutral.active{
+    background: #636363;
+}
+.answer-agree.active .material-icons{
+    color: white;
+}
+.answer-disagree.active .material-icons{
+    color: white;
+}
+.neutral.active .material-icons{
+    color: white;
+}
+
+.side{
+    font-weight: 600;
+}
+.agree-side{
+    color: #56ac8a;
+}
+.disagree-side{
+    color: #5f394d;
+}
+
+#questions-container{
+    width: 75%;
+    margin: 0 auto;
+}
+
+.button{
+    padding: 16px 32px;
+    background: #3498db;
+    display: inline-block;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.14), 0 4px 5px 0 rgba(0,0,0,0.12), 0 1px 10px 0 rgba(0,0,0,0.2);
+    transition: .3s all;
+}
+#survey-button{
+    width: 50%;
+    margin: 0 auto;
+}
+.button:hover{
+    box-shadow: 0 0 4px 0 rgba(0,0,0,0.14), 0 3px 4px 0 rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2)
+}
+
+p{
+    line-height: 1.6em
+}
