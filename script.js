@@ -102,15 +102,22 @@ document.getElementById("no-button").addEventListener("click", () => {
     results.multilingual = false;
 })
 
+// document.getElementById("answer").addEventListener("click", (event) => {
+//     this.val = Number(answer.dataset.val);
+//     this.selected = i;
+//     if (this.actualSelected != -1)
+//         this.answerEls[this.actualSelected].classList.remove("active");
+//     this.answerEls[val].classList.add("active");
+//     this.actualSelected = val;
+// });
+
 
 const classes = ["agree-lg answer answer-lg answer-agree", "agree-sm answer answer-sm answer-agree", "neutral answer", "disagree-sm answer answer-sm answer-disagree", "disagree-lg answer answer-lg answer-disagree"];
 class Question {
-    constructor(question, reverse, type) {
+    constructor(question) {
         this.val = -1;
-        this.reverse = reverse;
         this.actualSelected = -1;
         this.answerEls = [];
-        this.type = type
 
         const main = document.createElement("div");
         main.className = "question";
@@ -130,7 +137,7 @@ class Question {
             answers.appendChild(answer);
             this.answerEls.push(answer);
             answer.className = classes[i];
-            answer.dataset.val = reverse ? i : (4 - i);
+            answer.dataset.val = i;
             const check = document.createElement("i");
             check.className = "material-icons";
             check.textContent = "check";
@@ -155,8 +162,11 @@ class Question {
     }
 }
 const questionPrompts = [{
-    question: "I easily feel sad when the people around me feel sad.",
-    reverse: false
+    question: "How proficient are you at sight reading?"
+}, {
+    question: "How proficient are you in music theory?"
+}, {
+    question: "How proficient are you in ear training?"
 }];
 const questions = [];
 
@@ -176,7 +186,7 @@ function xwwwfurlenc(srcjson) {
     return urljson;
 }
 for (let i = 0; i < questionPrompts.length; i++)
-    questions.push(new Question(questionPrompts[i].question, questionPrompts[i].reverse, questionPrompts[i].type));
+    questions.push(new Question(questionPrompts[i].question));
 
 document.getElementById("survey-button").addEventListener("click", () => {
     //verify
