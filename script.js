@@ -25,15 +25,6 @@ const colorCodes = {
     "blue": "#3498db",
     "yellow": "#f1c40f"
 };
-/*const Pages = {
-    SIGNIN: 0,
-    BILINGUAL: 1,
-    STROOP: 2,
-    SURVEY: 3,
-    THANKS: 4,
-    INSTRUCTIONS: 5,
-    STROOP_INSTRUCTIONS: 6
-}*/
 
 const results = {};
 
@@ -52,14 +43,6 @@ const reset = () => {
 const showPointIndicator = () => {
     document.getElementById("plus-indicator").style.opacity = 1;
 }
-// const showPage = (id) => {
-//     const pages = document.getElementsByClassName("page");
-//     for (let i = 0; i < pages.length; i++) {
-//         pages[i].style.display = "none";
-//     }
-//     pages[id].style.display = "block";
-//     page = id;
-// }
 
 /**
  * STROOP TEST
@@ -95,6 +78,8 @@ setInterval(() => {
         if (timeRemaining === 0) {
             results.stroop = numCorrect;
             // showPage(Pages.SURVEY);              OVER HERE!!!!
+            window.location.replace("endpage.html");
+            //return true;
         }
     }
 }, 1000)
